@@ -47,7 +47,7 @@
     },
     "githubRepoURL": {
       "type": "string",
-      "defaultValue": "https://github.com/stephgou/integration-services"
+      "defaultValue": "https://github.com/stephgou/AzureNetworkWatcherNSGFlowLogsConnector"
     },
     "githubRepoBranch": {
       "type": "string",
