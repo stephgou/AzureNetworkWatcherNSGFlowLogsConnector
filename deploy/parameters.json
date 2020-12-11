@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "value": "amadeusNWNSG"
+        },
+        "appServicePlan": {
+            "value": "Consumption"
+        },
+        "appServicePlanTier": {
+            "value": "Free"
+        },
+        "nsgSourceDataConnection": {
+            "value": "DefaultEndpointsProtocol=https;AccountName=amadeusmanagement;AccountKey=ePfuRv7RuU0KO5ICoqvl4QM7lM6zN3gI57577Pzg7baPViuQHQ/X0fd2FwGx2DokeYi6KxNMNfNhO7ihjdOLdg==;EndpointSuffix=core.windows.net"
+        },
+        "cefLogAccount": {
+            "value": "DefaultEndpointsProtocol=https;AccountName=amadeusmanagement;AccountKey=ePfuRv7RuU0KO5ICoqvl4QM7lM6zN3gI57577Pzg7baPViuQHQ/X0fd2FwGx2DokeYi6KxNMNfNhO7ihjdOLdg==;EndpointSuffix=core.windows.net"
+        },
+        "outputBinding": {
+            "value": "eventhub"
+        },
+        "eventHubConnection": {
+            "value": "Endpoint=sb://nsgwatcher.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=cfyMH+apVQbVyurlCAGj0EkVLcnbWuyBCLts8irN48Y="
+        },
+        "eventHubName": {
+            "value": "insights-logs-nsgflowlogs"
+        }
+    }
+}
