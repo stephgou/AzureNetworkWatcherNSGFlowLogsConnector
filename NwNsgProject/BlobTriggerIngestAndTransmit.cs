@@ -9,6 +9,7 @@ using Microsoft.Azure.Cosmos.Table;
 using System;
 using System.Buffers;
 using System.Linq;
+using System.IO;
 
 namespace nsgFunc
 {
@@ -16,13 +17,14 @@ namespace nsgFunc
     {
         [FunctionName("BlobTriggerIngestAndTransmit")]
         public static async Task Run(
-            [BlobTrigger("%blobContainerName%/resourceId=/SUBSCRIPTIONS/{subId}/RESOURCEGROUPS/{resourceGroup}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{nsgName}/y={blobYear}/m={blobMonth}/d={blobDay}/h={blobHour}/m={blobMinute}/macAddress={mac}/PT1H.json", Connection = "nsgSourceDataAccount")]CloudBlockBlob myBlob,
+            [BlobTrigger("%blobContainerName%/resourceId=/SUBSCRIPTIONS/{subId}/RESOURCEGROUPS/{resourceGroup}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{nsgName}/y={blobYear}/m={blobMonth}/d={blobDay}/h={blobHour}/m={blobMinute}/macAddress={mac}/PT1H.json", Connection = "nsgSourceDataConnection")] CloudBlockBlob myBlob,
             [Table("checkpoints", Connection = "AzureWebJobsStorage")] CloudTable checkpointTable,
             Binder nsgDataBlobBinder,
             Binder cefLogBinder,
             string subId, string resourceGroup, string nsgName, string blobYear, string blobMonth, string blobDay, string blobHour, string blobMinute, string mac,
             ExecutionContext executionContext,
             ILogger log)
+
         {
             log.LogDebug($"BlobTriggerIngestAndTransmit triggered: {executionContext.InvocationId} ");
 
@@ -117,5 +119,6 @@ namespace nsgFunc
 
             checkpoint.PutCheckpoint(checkpointTable, blockList.Count()-1);
         }
+
     }
 }

@@ -1,12 +1,12 @@
 param(
     # The subscription id where the template will be deployed.
-    [string]$subscriptionId = "0459dbd5-b73e-4a5b-b052-250dc51ac622",
+    [string]$subscriptionId = "NOT TO BE INCLUDED IN PUBLIC SOURCE REPOSITORY",
     # The resource group in to which to deploy all the resources
     [string]$resourceGroupName = "SG-RG-AMADEUS-AZURE-MANAGEMENT",
     # Optional, Azure region to which to deploy all resources. Defaults to Central US.
     [string]$region = "westeurope",
     # Optional, name for the deployment. If not specified, deployment name will be "azuredeploy-yyyyMMdd-hhmmss" (for example, azuredeploy-20190724-083224).  Deployment to set up Azure Data Explorer will have "-dexdataconnection" appended to the base name.
-    [string]$deploymentName = "Amadeus-NWNSG"
+    [string]$deploymentName = "Amadeus-NWNSG
 )
 
 #region init

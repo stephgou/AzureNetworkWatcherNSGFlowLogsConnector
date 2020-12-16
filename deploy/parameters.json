@@ -12,17 +12,17 @@
             "value": "Free"
         },
         "nsgSourceDataConnection": {
-            "value": "DefaultEndpointsProtocol=https;AccountName=amadeusmanagement;AccountKey=ePfuRv7RuU0KO5ICoqvl4QM7lM6zN3gI57577Pzg7baPViuQHQ/X0fd2FwGx2DokeYi6KxNMNfNhO7ihjdOLdg==;EndpointSuffix=core.windows.net"
+            "value": "NOT TO BE INCLUDED IN PUBLIC SOURCE REPOSITORY"
         },
-        "cefLogAccount": {
-            "value": "DefaultEndpointsProtocol=https;AccountName=amadeusmanagement;AccountKey=ePfuRv7RuU0KO5ICoqvl4QM7lM6zN3gI57577Pzg7baPViuQHQ/X0fd2FwGx2DokeYi6KxNMNfNhO7ihjdOLdg==;EndpointSuffix=core.windows.net"
-        },
+      "cefLogAccount": {
+        "value": "NOT TO BE INCLUDED IN PUBLIC SOURCE REPOSITORY"
+      },
         "outputBinding": {
             "value": "eventhub"
         },
-        "eventHubConnection": {
-            "value": "Endpoint=sb://nsgwatcher.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=cfyMH+apVQbVyurlCAGj0EkVLcnbWuyBCLts8irN48Y="
-        },
+      "eventHubConnection": {
+        "value": "NOT TO BE INCLUDED IN PUBLIC SOURCE REPOSITORY"
+      },
         "eventHubName": {
             "value": "insights-logs-nsgflowlogs"
         }
